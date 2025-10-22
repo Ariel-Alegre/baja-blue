@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.tigresstransport.com.mx/sitemap.xml
