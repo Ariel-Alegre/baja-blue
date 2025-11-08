@@ -57,8 +57,8 @@ module.exports = {
 <html>
   <body style="background-color: #f4f4f4; font-family: Arial, Helvetica, sans-serif; color: #333; line-height: 1.6; padding: 2em 0;">
     <div style="max-width: 600px; margin: 0 auto; padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-      <img src="https://www.tigresstransport.com.mx/img/Logo.jpg" alt="Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h2 style="color: #ff5733; font-size: 24px;">Hello, ${name}!</h2>
+      <img src="https://www.bajabluetransportation.com.mx/img/Logo.png" alt="Logo" style="max-width: 150px; margin-bottom: 20px;">
+      <h2 style="color: #0056b3; font-size: 24px;">Hello, ${name}!</h2>
       <p style="font-size: 16px; margin-bottom: 20px;">Thank you for contacting us. We have received your message and will get back to you soon.</p>
       <p style="font-size: 16px; color: #555;">In the meantime, feel free to reach out if you have any other questions.</p>
       <p style="margin-top: 30px; font-size: 14px; color: #888;">This is an automated message, please do not reply.</p>
@@ -71,7 +71,7 @@ module.exports = {
 
       // Enviar correo de confirmación al usuario
       await transporter.sendMail({
-        from: "reservations@tigresstransport.com.mx",
+        from: process.env.EMAIL,
         to: email, // Enviar a la dirección del usuario
         subject: `Thank you for contacting us, ${name}`,
         html: emailUser,
